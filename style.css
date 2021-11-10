@@ -1,0 +1,494 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --primary: #a5d6a7;
+  --white: #ffffff;
+}
+
+header.stickyHeader {
+	width: 100%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	
+	
+	
+}
+
+
+
+.header-container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fafafa;
+	justify-content: flex-start;
+	box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+.header-container > div {
+	transition: 0.2s ease;
+	background-color: #fafafa;
+	margin: 0px;
+	padding: 0px 40px;
+	font-size: 20px;
+	font-family: 'Archivo Black', sans-serif;
+}
+
+#navbarNormal > div:hover {
+  transition: 0.2s ease;
+  color:#f06292;
+  background-color: white;
+   
+}
+
+.header-container:hover > div {
+	transition: 0.2s ease;
+	padding: 10px 40px;
+	
+	background-color: white;
+}
+
+.header-container:hover {
+	background-color: white;
+}
+
+.header-container .mobileButton {
+	display:none;
+}
+
+.header-container #mobileClosed {
+	display:none;
+}
+
+#navbarMobile:hover #mobileCollapsed
+{
+    display:none;
+}
+
+#navbarMobile:hover .mobileButton{
+    display:flex;
+}
+
+#navbarMobile:hover .mobileClosed{
+    display:flex;
+}
+
+.cardLink{
+	text-decoration:none;
+	color: inherit;
+}
+
+.cardLink:hover{
+	text-decoration:none;
+	color: inherit;
+}
+
+
+/*Adjusting the background color*/
+body{
+    background-color: #f5f5f5;
+}
+
+/*Adjusting the default fonts*/
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h2{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/* CSS FOR DESKTOP NAVBAR*/
+
+/*the navbar is stuck to top of screen, has a shadow drawn below it, and appears on top of all elements. */
+#navbar {
+    background-color: #ffffff;
+
+
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0px;
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    z-index: 999;
+}
+/*Class styling the cards so the entire card is a link */
+.listingLink {
+    color: #000000;
+    text-decoration: none;
+}
+.listingLink:hover p {
+    color: #000000;
+}
+
+/*CSS FOR THE MOBILE NAVBAR*/
+#navbarMobile {
+    background-color: #ffffff;
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0px;
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 999;
+}
+
+/*CSS FOR PARTS WITHIN THE MOVILE NAVBAR*/
+/*the navbar is stuck to top of screen, has a shadow drawn below it, and appears on top of all elements. */
+#navbarMobile .row .col-sm-1
+{
+    display:none;
+    transition: 0.2s ease;
+    padding:3px 10px;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*Navbar links use font Archivo Black and text decoration is removed so they fit with the style of the website*/
+#navbarMobile a{
+    text-decoration: none;
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+}
+
+/* Id to ensure that the menu button is displayed by default on mobile*/
+#mobileCollapsed {
+    display:flex;
+    text-align:center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#mobileClose {
+    display:none;
+    text-align:center;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*Upon a mobile user interacting with the navbar, all the menu options are displayed vertically using display:flex*/
+#navbarMobile:hover .row .col-sm-1{
+    display:flex;
+}
+
+/*Upon a mobile user interacting with the navbar, the 'MENU' button is hidden */
+#navbarMobile:hover #mobileCollapsed
+{
+    display:none;
+}
+
+/* MAYBE REMOVE THIS*/
+#navbarMobile:hover #mobileClose
+{
+    display:none;
+}
+
+
+
+/*CSS FOR PARTS WITHIN THE DESKTOP NAVBAR*/
+/*Navbar links use font Archivo Black and text decoration is removed so they fit with the style of the website*/
+#navbar a {
+
+
+    text-decoration: none;
+    font-family: 'Archivo Black', sans-serif;
+    color: #000000;
+}
+
+/*added a 0.2s transition so that when a user stops hovering on a column it smoothly transitions back to the default state*/
+#navbar .row .col-sm-1
+{
+    transition: 0.2s ease;
+    padding:3px 0px;
+    text-align: center;
+}
+
+/*Upon hovering over the navbar the padding is increased making it appear bigger, making it more intuitive for users to interact with it.*/
+#navbar:hover .row .col-sm-1
+{
+    transition: 0.2s ease;
+    padding:10px 0px;
+
+}
+
+
+
+
+#navbar .row .col-sm-1:hover a
+{
+
+
+    colour: white;
+}
+/*Give the add listing button a light pink background colour */
+#addListing{
+    background-color: #ff94c2;
+}
+/*Upon hovering on a column, add a pink background colour */
+#navbar .row .col-sm-1:hover
+{
+    background-color:#f06292;
+
+}
+
+/*Adjusting padding and flex properties for the containers which hold website content */
+.container-xxl{
+    padding:30px;
+    flex-wrap: wrap;
+}
+.container-xxl .row{
+    padding:5px;
+
+}
+.container-lg .row{
+    padding:20px;
+    flex-wrap:wrap;
+
+}
+
+
+/*Flex boxes within columns within rows are given appropriate paddings and margins and a shadow*/
+.row .col-sm-4 .flex-box{
+    margin:20px 5px;
+    padding:10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Hovering over the flex boxes makes the shadow darker, making it intuitive for the user to interact with them*/
+.row .col-sm-4 .flex-box:hover{
+    transition: 0.2s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+
+/*
+images within Flex boxes within columns within rows fill the flex boxes width, and have a max height of 250px so that vertical images do not warp the website.*/
+.row .col-sm-4 .flex-box img{
+
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    max-height: 250px;
+
+}
+/*
+/*H2s within Flex boxes within columns within rows use the archivo black font*/
+.row .col-sm-4 .flex-box h2{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*Upon hovering over a card, the heading transitions to being pink to make users know they can interact with the card*/
+.row .col-sm-4 .flex-box:hover h2{
+    transition: 0.2s ease;
+    color:#f06292;
+}
+
+.flex-box {
+    overflow: visible;
+}
+
+/*Styling cards so they have a max width of 22rem, so that they tile appropriately on big screens
+but can still shrink to fit mobile screens with small widths. */
+.card{
+    max-width:22rem;
+    width:100%;
+    margin:20px;
+    padding:0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.1s ease;
+}
+
+/*Upon hovering over a card, the shadow becomes darker, signaling that it can be interacted with */
+.card:hover{
+    transition: 0.1s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+
+}
+
+
+.card h2{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*Upon hovering over a card, the heading transitions to being pink to make users know they can interact with the card*/
+.card:hover h2{
+
+    transition: 0.2s ease;
+    color:#f06292;
+}
+
+/*Styling the images within the cards so that their height stays between 10 and 15 rem so they dont warp the look of the
+website by being too tall or too short*/
+.card img{
+    object-fit: cover;
+    max-height:15rem;
+    min-height:10rem;
+}
+
+/*CSS FOR FORM ELEMENTS*/
+form div {
+    margin:20px;
+
+}
+
+.form-label p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+form input {
+    margin: 0px 0px 50px 0px;
+
+}
+
+/*Added a transition so when a user click off the input it smoothly transitions back to normal.*/
+input[type=text]{
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s ease;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+input[type=text]:focus{
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+textarea{
+    font-family: 'Montserrat', sans-serif;
+    outline-color: #f06292;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+textarea:focus{
+
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+input[type=tel]:focus{
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+input[type=file]:focus{
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+/*The submit button starts with a pink background and a light pink border.*/
+input[type=submit]{
+    background-color: #f06292;
+    border-color: #ba2d65;
+    font-family: "Archivo Black",sans-serif;;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+input[type=email]:focus{
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+/*Upon clicking the input element, a shadow appears and the border turns pink*/
+input[type=password]:focus{
+    border: 1px solid #f06292;
+    box-shadow: 3px 3px 4px lightgrey;
+}
+
+/*Upon hovering over the submit button it will turn green.*/
+input[type=submit]:hover{
+    background-color: #4caf50;
+    border-color:#087f23;
+}
+
+#formIntro {
+    text-align: center;
+}
+
+#formIntro h2 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*Styling buttons to appear pink */
+.btn{
+    background-color: #f06292;
+    border-color: #ba2d65;
+    font-family: "Archivo Black",sans-serif;;
+}
+
+/*Upon hovering over a button, it will turn a darker shade of pink. */
+.btn:hover{
+    background-color: #ba2d65;
+    border-color: #85003b;
+    font-family: "Archivo Black",sans-serif;
+}
+
+.form-check-input{
+    /*border: 1px solid #f06292;*/
+}
+
+/*checked input boxes appear pink*/
+.form-check-input:checked{
+    border: 1px solid #ba2d65;
+    background-color: #f06292;
+    /*box-shadow: 3px 3px 4px darkgray;*/
+}
+
+/*Adjusting the bootstrap primary border properties to fit better with the style of our website*/
+.border-primary {
+    border: 1px solid lightgray !important;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+    /*border-color: lightgray !important;*/
+}
+
+.form-check-input:focus{
+    border: 2px solid #ba2d65;
+}
+
+/*Adjusting the bootstrap border-dark properties to fit better with the style of our website*/
+
+.border-dark {
+    border: 1px solid lightgray !important;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+/*the '!important' line suffixes allow us to overwrite the default bootstrap stylings.  */
+.form-check-input
+{
+    box-shadow: none !important;
+    margin:0px 15px;
+}
+
+textarea:focus{
+    border: 1px solid #f06292 !important;
+    box-shadow: 3px 3px 4px lightgrey !important;
+}
+
+.listing-card{
+
+    max-width:35rem !important;
+    width:100%;
+    margin:20px;
+    padding:0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.1s ease;
+}
+
+main{
+    min-height: 80vh;
+    height: auto !important;
+}
+#logo {
+    max-height: 256px;
+}
+#landing-image{
+    max-height: 512px;
+}
