@@ -3,10 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-  --primary: #a5d6a7;
+  --primary: #f06292;
+  --primary2: #43a047;
+  --primarylight: #ff94c2;
   --white: #ffffff;
 }
-
+ 
 header.stickyHeader {
 	width: 100%;
 	position: -webkit-sticky;
@@ -19,6 +21,19 @@ header.stickyHeader {
 }
 
 
+
+
+a.active{
+	transition: 0.2s ease;
+	text-decoration:none;
+	color: var(--primary);
+}
+
+.header-container > div:hover a.active{
+	transition: 0.2s ease;
+	text-decoration:none;
+	color: var(--white);
+}
 
 .header-container {
 	display: flex;
@@ -40,8 +55,8 @@ header.stickyHeader {
 
 #navbarNormal > div:hover {
   transition: 0.2s ease;
-  color:#f06292;
-  background-color: white;
+  color:white;
+  background-color: var(--primary);
    
 }
 
@@ -286,7 +301,7 @@ images within Flex boxes within columns within rows fill the flex boxes width, a
 /*Upon hovering over a card, the heading transitions to being pink to make users know they can interact with the card*/
 .row .col-sm-4 .flex-box:hover h2{
     transition: 0.2s ease;
-    color:#f06292;
+    color:var(--primary);
 }
 
 .flex-box {
@@ -320,7 +335,7 @@ but can still shrink to fit mobile screens with small widths. */
 .card:hover h2{
 
     transition: 0.2s ease;
-    color:#f06292;
+    color:var(--primary);
 }
 
 /*Styling the images within the cards so that their height stays between 10 and 15 rem so they dont warp the look of the
