@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
+header {
+	position: sticky; 
+	top: 0;
+	z-index:999;
+}
+
+:root {
+  --headerGrey: #dedede;
+  --white: #ffffff;
+  --primary:#4caf50 ;
+  --vDarkGrey: #292929;
+  --vLightGrey: #fcfcfc;
+}
+
+body {
+	background-color: var(--white)
+}
+
+h2{
+	font-family: 'Cousine', monospace;
+}
+
+p{
+	font-family: 'Manrope', sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  background-color:   #f1f1f1;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:0px;
+}
+
+.flex-container > .hoverDiv {
+  background-color: #f1f1f1;
+  margin:60px;
+  padding: 0px;
+  font-size: 30px;
+  
+  width:45rem;
+  min-width: 300px;
+  position:relative;
+  
+}
+
+.flex-container > .hoverDiv > img {
+	width:100%;
+	margin-top:auto;
+	margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container-fluid {
+	padding:0px!important; 
+}
+
+#test {
+	background-color: var(--headerGrey);
+	margin:0px!important; 
+	border-style:solid;
+	border-color: var(--headerGrey);
+}
+
+.flex-header {
+  display: flex;
+  justify-content:center;
+  box-shadow: rgba(14, 30, 37, 0.32) 0px 3px 3px 0px;
+  background-color:var(--headerGrey);
+  transition: 0.2s ease;
+  flex-wrap:wrap;
+}
+
+.flex-header:hover {
+	background-color:gray;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 2px 0px, rgba(14, 30, 37, 0.32) 0px 1px 8px 0px;
+	transition: 0.2s ease;
+}
+
+#theNav:hover #test{
+	background-color:gray!important;
+	
+	transition: 0.2s ease;
+}
+
+
+.flex-header > div {
+  
+  margin: 0px 20px;
+  padding: 0px 10px;
+  font-size: 2rem;
+  transition: 0.2s ease;
+}
+
+.flex-header > div > a {
+	text-decoration:none;
+	font-family: 'Rubik Mono One', sans-serif;
+	color:#000000 !important; 
+}
+
+#active {
+	color:var(--primary)!important;
+	
+	
+}
+
+
+
+.flex-header:hover > div{
+	transition: 0.2s ease;
+	margin: 0px 20px;
+	padding: 10px 10px;
+}
+
+
+
+.flex-header:hover > div > a{
+	text-decoration:none;
+	
+	
+	transition: 0.2s ease;
+}
+
+.flex-header:hover > div:hover > a{
+	text-decoration:none;
+	color:var(--headerGrey) !important;
+}
+
+
+
+.row {
+	display: flex;
+  justify-content:center;
+}
+
+.row > .bigPics {
+	padding:0px;
+	
+}
+
+.row > .bigPics > img{
+	object-fit:cover;
+}
+
+.row > .smallPics {
+	justify-content:center;
+	padding:40px !important;
+	
+}
+
+.row > .smallPics > img{
+	width:70%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.overlay-fade{
+	
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color:#3b3b3b;
+	color:white;
+	
+	/*
+	background-color: #2d4254;
+	*/
+	
+}
+
+
+.overlay-fade:hover{
+	opacity:0.9;
+}
+
+.overlay-fade p {
+	
+	margin:20px;
+}
+
+.overlay-text {
+	padding:30px;
+	
+}
+
+.overlay-text > h2 {
+	opacity: 1;
+	font-family: 'Rubik Mono One', sans-serif !important;
+}
+
+.col-8 {
+	align-content:center;
+}
+
+.col-8 > p {
+	padding: 20px 40px 20px 40px;
+	border-style:none;
+	font-family: 'Work Sans', sans-serif;
+	font-size:20px;
+	
+}
+
+.col-8 > h2 {
+	text-align:center;
+	font-family: 'Rubik Mono One', sans-serif !important;
+}
+
+.col-8 > h1 {
+	text-align:center;
+	font-family: 'Rubik Mono One', sans-serif !important;
+	font-size:60px;
+	color:white;
+	background-color:gray;
+	border-radius:4px;
+	margin: 20px 0px;
+}
+img {
+	border-radius:6px;
+}
